@@ -1,15 +1,18 @@
 package main
+
 import "fmt"
 
 func main() {
 	var n, i int
-	var pecahan, sign float64
+	var pecahan, sign, kurung float64
 	fmt.Scan(&n)
-	
-	sign = -1
+
+	sign = 1
+	kurung = 1
 	for i = 1; i <= n; i++ {
-	
-	pecahan = 1/(1+(float64(i)*2)) * sign
+		sign = sign * -1
+		pecahan = (1 / (1 + (float64(i) * 2))) * sign
+		kurung = kurung + pecahan
 	}
-	fmt.Println(4*(1+pecahan))
+	fmt.Println(4 * kurung)
 }
