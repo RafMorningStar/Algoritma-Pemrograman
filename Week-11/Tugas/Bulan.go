@@ -19,7 +19,7 @@ func main() {
 	case 6:
 		fmt.Println("Juni")
 	case 7:
-		fmt.Println("July")
+		fmt.Println("Juli")
 	case 8:
 		fmt.Println("Agustus")
 	case 9:

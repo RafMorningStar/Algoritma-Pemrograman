@@ -30,6 +30,8 @@ func main() {
 		} else {
 			fmt.Println(bil1 / bil2)
 		}
+	default :
+		fmt.Println("Operasi tidak valid")
 	}
 
 }
