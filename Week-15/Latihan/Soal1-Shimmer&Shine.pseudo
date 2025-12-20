@@ -1,0 +1,10 @@
+program soal1
+kamus
+    intens1, intens2: integer
+
+algoritma
+    input(intens1, intens2)
+    if (intens1 MOD 2 == 0 AND intens2 MOD 2 - 1 == 0) OR (intens1 MOD 2 - 1 == 0 AND intens2 MOD 2 == 0) do
+    print("berhasil")   
+    endif
+endprogram

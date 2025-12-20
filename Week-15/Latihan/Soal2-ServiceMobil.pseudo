@@ -1,0 +1,15 @@
+program mobil
+kamus
+    jamdatang, menitdatang, jamselesai, menitselesai, lamaservice, datangdalammenit: integer
+
+algoritma
+    input(jamdatang, menitdatang, lamaservice)
+    datangdalammenit <- (jamdatang * 60) + menitdatang
+    jamselesai <- (datangdalammenit + lamaservice) / 60
+    menitselesai <- (datangdalammenit + lamaservice) MOD 60
+    if jamselesai*60 + menitselesai > 20*60 then
+        print("Silahkan datang kembali besok")
+    else 
+        print(jamselesai, menitselesai)
+    endif
+endprogram

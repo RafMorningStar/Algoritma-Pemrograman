@@ -4,9 +4,11 @@ import "fmt"
 
 func main() {
 	var ajuHari string
-	var totalHari, selisihTanggal int
+	var totalHari, selisihTanggal, nOrang int
 	var kabisat bool
 	var ajuTanggal, ajuBulan, ajuTahun, ambilTanggal, ambilBulan, ambilTahun int
+	nOrang=1
+	fmt.Printf("Passport %d: ", nOrang)
 	fmt.Scan(&ajuHari)
 	kabisat = true
 	selisihTanggal = 2
@@ -17,9 +19,9 @@ func main() {
 		} else {
 			kabisat = false
 		}
-		if kabisat && ajuBulan == 2 {
+		if kabisat == true && ajuBulan == 2 {
 			totalHari = 29
-		} else if !kabisat && ajuBulan == 2 {
+		} else if kabisat == false && ajuBulan == 2 {
 			totalHari = 28
 		} else if ajuBulan == 4 || ajuBulan == 6 || ajuBulan == 9 || ajuBulan == 11 {
 			totalHari = 30
@@ -44,7 +46,8 @@ func main() {
 		}
 		fmt.Printf("passport bisa diambil pada tanggal %d bulan %d tahun %d\n", ambilTanggal, ambilBulan, ambilTahun)
 		selisihTanggal = 2
+		nOrang++
+		fmt.Printf("Passport %d: ", nOrang)
 		fmt.Scan(&ajuHari)
 	}
-
 }
